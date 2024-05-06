@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "d563236a-45f8-4408-afcf-84fe9b925537",
+		"name": "Weatherbit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34727621"
+	},
+	"item": [
+		{
+			"name": "weather-based-on-postcode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"  pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "3b4bf78553bf4ea997dd29b21ed86334",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherbit.io/v2.0/current?postal_code=3079",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "3079"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weather-based-on-lon-lat",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "3b4bf78553bf4ea997dd29b21ed86334",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherbit.io/v2.0/current?lat=51.5072&lon=-0.1276",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherbit",
+						"io"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "51.5072"
+						},
+						{
+							"key": "lon",
+							"value": "-0.1276"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

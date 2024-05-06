@@ -34,4 +34,4 @@ To run the Newman spec, simply run use the following command:
 ```bash
 newman run api-tests/Weatherbit.postman_collection.json -r cli,json
 ```
-Running this command will run the postman collection, retrieving the weather data from both a longitude and latitude and by zip code, as well as generate a report in console and print the request to JSON in a runtime generate root folder titled 'Newman.'
+Running this command will run the postman collection, retrieving the weather data from both a longitude and latitude and by zip code, as well as generate a report in console and print the response to JSON in a runtime generated root folder titled 'Newman.'

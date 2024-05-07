@@ -11,8 +11,9 @@ This is an example project written as part of an evaluation as a part of the int
 ```bash
 git clone https://github.com/Iry-Horus/qantas-playwright-demo.git
 ```
+2. Check out the feature/ZachBennett-QloyalCodeTest branch.
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 npm install
 ```
